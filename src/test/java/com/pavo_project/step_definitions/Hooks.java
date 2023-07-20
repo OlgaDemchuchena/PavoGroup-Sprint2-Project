@@ -37,7 +37,7 @@ public class Hooks {
     /*
     @After will be executed automatically after EVERY scenario in the project.
      */
-    @After
+ /*   @After
     public void teardownMethod(Scenario scenario){
 
         if (scenario.isFailed()) {
@@ -53,6 +53,8 @@ public class Hooks {
         Driver.closeDriver();
 
     }
+
+  */
 
     //@BeforeStep
     public void setupStep(){

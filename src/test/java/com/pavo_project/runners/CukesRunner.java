@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/pavo_project/step_definitions",
-        dryRun = true,
-        tags = " @wip",
+        dryRun = false,
+        tags = "@B29G37-207",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
