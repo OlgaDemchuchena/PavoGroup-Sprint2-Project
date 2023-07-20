@@ -37,24 +37,19 @@ public class Hooks {
     /*
     @After will be executed automatically after EVERY scenario in the project.
      */
- /*   @After
+   @After
     public void teardownMethod(Scenario scenario){
 
         if (scenario.isFailed()) {
 
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
-
         }
-
-
 
         BrowserUtils.sleep(2);
         Driver.closeDriver();
-
     }
 
-  */
 
     //@BeforeStep
     public void setupStep(){
@@ -65,6 +60,5 @@ public class Hooks {
     public void teardownStep(){
         System.out.println("-----> @AfterSTEP : Running after each step!");
     }
-
 
 }

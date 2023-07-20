@@ -4,6 +4,7 @@ import com.pavo_project.pages.LoginPage;
 import com.pavo_project.pages.SalesPage;
 import com.pavo_project.utilities.BrowserUtils;
 import com.pavo_project.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -32,23 +33,24 @@ public class SalesPage_StepDefinitions {
     @Then("User indicates {int} columns to see the quotations’ descriptions")
     public void user_indicates_columns_to_see_the_quotations_descriptions(int int1) {
 
-
      List<WebElement> TotalColsList = salesPage.ToGetColumns.findElements(By.xpath("//th[@class='o_column_sortable']"));
      Assert.assertEquals(TotalColsList.size(), 6);
-
     }
 
-    @When("User enters Quotation Number data “SO801” in a Search window and clicks Enter")
-    public void user_enters_quotation_number_data_so801_in_a_search_window() {
+    @When("User enters Quotation Number data {string} in a Search window and clicks Enter")
+    public void userEntersQuotationNumberDataInASearchWindow(String searchKey) {
+        BrowserUtils.sleep(3);
 
-        salesPage.searchButton.sendKeys("SO801" + Keys.ENTER);
+        salesPage.searchBox.sendKeys(searchKey + Keys.ENTER);
     }
+
     @Then("User sees the result on the list")
     public void user_sees_the_result_on_the_list() {
 
       String expectedResult = "SO801";
+        BrowserUtils.sleep(3);
 
       Assert.assertEquals(salesPage.actualResult.getText(), expectedResult);
-
     }
+
 }

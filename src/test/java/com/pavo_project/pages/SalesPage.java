@@ -21,7 +21,10 @@ public class SalesPage {
     @FindBy(xpath = "//table[@class='o_list_view table table-condensed table-striped o_list_view_ungrouped']/thead/tr")
     public WebElement ToGetColumns;
 
-    @FindBy(xpath = "//input[@class='o_searchview_input']")  //(xpath = "//body[@class='o_web_client']" "//input[@class='o_searchview_input']")
+    @FindBy(xpath = "//input[@class='o_searchview_input']")
+    public WebElement searchBox;
+
+    @FindBy(xpath = "//*[.='Sales Order']")
     public WebElement searchButton;
 
     @FindBy(xpath = "//td[@class='o_data_cell o_readonly_modifier o_required_modifier']")

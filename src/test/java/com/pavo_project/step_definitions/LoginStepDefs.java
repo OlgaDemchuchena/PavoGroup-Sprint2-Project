@@ -3,6 +3,8 @@ package com.pavo_project.step_definitions;
 import com.pavo_project.pages.LoginPage;
 import com.pavo_project.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+
 public class LoginStepDefs {
 
 
@@ -28,4 +30,4 @@ public class LoginStepDefs {
         new LoginPage().login(username,password);
     }
 
-}
+   }
